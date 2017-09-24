@@ -1,6 +1,6 @@
 <?php
 
-namespace ShawnSandy\OrangeBox;
+namespace ShawnSandy\Orangebox;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
@@ -91,7 +91,7 @@ class OrangeboxThemesProvider extends ServiceProvider
 		$this->registerFactoriesPath(__DIR__.'/factories');
 
 		$views = resources_path(
-		            "views/themes/orangebox"
+		            "views/orangebox"
 		        );
 
 		$this->loadViewsFrom($views, 'orangebox');

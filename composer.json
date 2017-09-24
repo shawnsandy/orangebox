@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ShawnSandy\\OrangeBox\\": "src"
+            "ShawnSandy\\Orangebox\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShawnSandy\\OrangeBox\\": "tests"
+            "ShawnSandy\\Orangebox\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
       "extra": {
           "laravel": {
               "providers": [
-                 //"ShawnSandy\OrangeBox\\OrangeboxServicesProvider"
+                 //"ShawnSandy\Orangebox\\OrangeboxServicesProvider"
               ],
               "aliases": {
-                  //"Orangebox": "ShawnSandy\OrangeBox\\OrangeboxFacade"
+                  //"Orangebox": "ShawnSandy\Orangebox\\OrangeboxFacade"
               }
           }
 

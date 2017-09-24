@@ -6,7 +6,7 @@
      * Time: 10:03 PM
      */
 
-    namespace ShawnSandy\OrangeBox;
+    namespace ShawnSandy\Orangebox;
 
 
     class Orangebox
