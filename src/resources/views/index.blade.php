@@ -1,5 +1,5 @@
-@extends(':package_name::layouts.layout')
-@section('title', ':package_name')
+@extends('orangebox::layouts.layout')
+@section('title', 'orangebox')
 @section('content')
-  @include(':package_name::index')
+  @include('orangebox::index')
 @endsection
