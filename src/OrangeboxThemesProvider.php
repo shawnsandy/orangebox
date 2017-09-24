@@ -51,7 +51,7 @@ class OrangeboxThemesProvider extends ServiceProvider
 						                __DIR__.'/public/assets/' => public_path('assets/')
 						            ], 'orangebox-assets'
 						        );
-		);
+
 
 
 
@@ -90,7 +90,7 @@ class OrangeboxThemesProvider extends ServiceProvider
 
 		$this->registerFactoriesPath(__DIR__.'/factories');
 
-		$views = resources_path(
+		$views = resource_path(
 		            "views/orangebox"
 		        );
 
