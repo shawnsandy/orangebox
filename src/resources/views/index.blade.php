@@ -170,9 +170,6 @@
 
                 </div>
 
-
-
-
                 <div class="column">
                     <div class="cards">
                         <div class="card-content">
