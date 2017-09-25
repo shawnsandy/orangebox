@@ -11,6 +11,8 @@ Route::view('/index', "orangebox::index");
 
 Route::view('/login', "orangebox::login");
 
+Route::view('/register', "orangebox::register");
+
 Route::view('/admin', "orangebox::dashboard");
 
 Route::view('/collections', "orangebox::pages.collections", ["page_class" => "collections-page"]);

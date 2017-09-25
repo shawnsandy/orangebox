@@ -12,6 +12,7 @@ var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var changed = require('gulp-changed');
 var toast = require('node-notifier');
+var git = require("gulp-git");
 
 const icons = function(iconsDir, outputDir) {
     var deferred = q.defer(),
@@ -63,6 +64,20 @@ gulp.task('package', function() {
         .pipe(changed('./src/resources/assets/**/*.*'))
         .pipe(gulp.dest('../../resources/assets/:package_name'))
 })
+
+
+gulp.task("git:clone", function() {
+  git.clone("https://github.com/shawnsandy/frontend", {args: './theme'}, function(err) {
+    if (err) {
+        toast.notify( {
+            title : "Sorry!",
+            message : "Error cloning theme, see console for log info",
+            sound: true
+        });
+        console.log(err);
+     };
+  });
+});
 
 
 gulp.task('watch:sass', function() {
