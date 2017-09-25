@@ -1,4 +1,4 @@
-@extends('orangebox::layouts.theme')
+@extends('orangebox::layouts.users')
 @section('title', 'orangebox')
 @section('content')
   Something
