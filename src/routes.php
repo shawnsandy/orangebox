@@ -8,6 +8,15 @@
 
 
 Route::view('/index', "orangebox::index");
+
 Route::view('/login', "orangebox::login");
+
 Route::view('/admin', "orangebox::dashboard");
+
 Route::view('/collections', "orangebox::pages.collections", ["page_class" => "collections-page"]);
+
+Route::view('/product', "orangebox::pages.product", ["page_class" => "product-page"]);
+
+Route::view('/page', "orangebox::pages.page", ["page_class" => "page"]);
+
+Route::view('/about', "orangebox::pages.about", ["page_class" => "about-page"]);
