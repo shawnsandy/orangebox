@@ -7,4 +7,6 @@
  */
 
 
-Route::view('/', "orangebox::index");
+Route::view('/index', "orangebox::index");
+Route::view('/login', "orangebox::login");
+Route::view('/admin', "orangebox::dashboard");
