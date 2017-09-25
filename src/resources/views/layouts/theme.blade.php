@@ -24,17 +24,16 @@
             <div class="container">
                 <div class="navbar-menu">
                     <a href="/" class="navbar-item">Home</a>
-                    <a href="/collections.html" class="navbar-item">Collection</a>
-                    <a href="/product.html" class="navbar-item">Product</a>
-                    <a href="/page.html" class="navbar-item">Pages</a>
-                    <a href="/about.html" class="navbar-item">About</a>
+                    <a href="{{ url("orangebox/collections")}}" class="navbar-item">Collection</a>
+                    <a href="{{ url("orangebox/product")}}" class="navbar-item">Product</a>
+                    <a href="{{ url("orangebox/page")}}" class="navbar-item">Pages</a>
+                    <a href="{{ url("orangebox/about")}}" class="navbar-item">About</a>
                 </div>
                 <div class="navbar-divider"></div>
-                <a href="dashboard.html" class="navbar-item">Admin</a>
-                <a href="login.html" class="navbar-item">Register / Login</a>
-                <a class="navbar-item">
-		<i class="im im-user-circle"></i>
-		</a>
+                <a href="{{ url("orangebox/admin")}}" class="navbar-item">Admin</a>
+                <a href="{{ url("orangebox/login")}}" class="navbar-item"><i class="im im-user-circle"></i></a>
+
+
             </div>
         </nav>
     </div>
