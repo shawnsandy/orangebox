@@ -12,7 +12,7 @@
 
                                     <div class="">
                                         <h1 class="subtitle is-1 has-text-centered is-uppercase">
-                                            Create an Account
+                                            Theme Setup
                                         </h1>
                                         <div class="box">
                                             <div class="section">
@@ -72,5 +72,6 @@
                         </div>
                     </div>
                 </div>
+
 
 @endsection

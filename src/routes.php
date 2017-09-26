@@ -11,7 +11,6 @@ Route::view('/index', "orangebox::index");
 
 Route::view('/login', "orangebox::login");
 
-Route::view('/register', "orangebox::register");
 
 Route::view('/admin', "orangebox::dashboard");
 
@@ -22,3 +21,5 @@ Route::view('/product', "orangebox::pages.product", ["page_class" => "product-pa
 Route::view('/page', "orangebox::pages.page", ["page_class" => "page"]);
 
 Route::view('/about', "orangebox::pages.about", ["page_class" => "about-page"]);
+
+Route::view('/register', "orangebox::pages.register");
