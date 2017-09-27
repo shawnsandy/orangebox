@@ -4,4 +4,4 @@ vendor
 /node_modules
 /src/ServicesProvider.php
 
-/theme
+/html
