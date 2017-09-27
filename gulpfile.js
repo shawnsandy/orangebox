@@ -83,7 +83,7 @@ gulp.task("import:partials", function() {
  * imports assets into the public dir
  */
 gulp.task("import:assets", function() {
-    return gulp.src(["./html/theme/public/css/**/*.css", "./html/theme/public/js/**/*.js"], {"base" : "./html/public"})
+    return gulp.src(["./html/theme/public/**/*.css", "./html/theme/public/**/*.js"], {"base" : "./html/theme/public"})
     .pipe(gulp.dest("./src/public"))
     .pipe(print())
 })
