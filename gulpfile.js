@@ -51,6 +51,9 @@ gulp.task("clone:html", function() {
 });
 
 
+gulp.task("imports", ["import:views", "import::partials"], function() {});
+
+
 /**
  * imports views and converts them to blade.php files
  *
@@ -77,5 +80,16 @@ gulp.task("import:partials", function() {
     .pipe(gulp.dest("./src/resources/views"))
     .pipe(print())
 });
+
+
+/**
+ * imports assets into the public dir
+ */
+gulp.task("import:assets", function() {
+    return gulp.src("./html/theme/public/**/*.*", {"base" : "./html/public"})
+    .pipe(changed("./src/public"))
+    .pipe(gulp.dest("./src/public"))
+    .pipe(print())
+})
 
 gulp.task('default', ["package"], function() {})
