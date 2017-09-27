@@ -51,7 +51,7 @@ gulp.task("clone:html", function() {
 });
 
 
-gulp.task("imports", ["import:views", "import::partials"], function() {});
+gulp.task("imports", ["import:views", "import::partials", "import::assets"], function() {});
 
 
 /**
