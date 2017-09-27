@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="stylesheets/app-e787fe0d66.css">
   <link rel="stylesheet" href="stylesheets/demo-b6a6c8cd86.css">
 
-<link rel="stylesheet" href="stylesheets/theme-00f311c306.css">
+<link rel="stylesheet" href="stylesheets/admin-070a62256f.css">
 
   <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
 

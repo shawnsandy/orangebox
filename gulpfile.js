@@ -36,7 +36,6 @@ gulp.task('package', function() {
         .pipe(gulp.dest('../../resources/assets/:package_name'))
 })
 
-
 gulp.task("clone:html", function() {
   git.clone("https://github.com/shawnsandy/frontend", {args: './html'}, function(err) {
     if (err) {
@@ -51,7 +50,7 @@ gulp.task("clone:html", function() {
 });
 
 
-gulp.task("imports", ["import:views", "import::partials", "import::assets"], function() {});
+gulp.task("imports", ["import:views", "import:partials", "import:assets"], function() {});
 
 
 /**
