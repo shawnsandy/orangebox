@@ -1,42 +1,12 @@
+<div class="columns">
 
-<main>
-	<div class="columns is-marginless">
-		<div class="column is-paddingless">
+	<div class="column is-6 is-offset-3">
 
-			<div class="hero is-fullheight">
-
-			<nav class="navbar is-transparent">
-	<div class="navbar-menu navbar-center">
-		<div class="navbar-start">
-			<a href="" class="navbar-item"><i class="im im-angle-left default"></i> Frontend</a>
-			<a href="" class="navbar-item"><i class="im im-users default"></i> Profile</a>
-		</div>
-
-		<div class="navbar-end">
-			
-		</div>
-
-	</div>
-</nav>
-
-			</div>
-
-		</div>
-		<div class="column is-paddingless is-three-quaters side-bar">
-
-			<div class="hero is-fullheight">
-				<div class="hero-body">
-					<div class="container">
-
-						<div class="columns">
-
-							<div class="column is-6 is-offset-3">
-
-								<div class="">
-								<h1 class="subtitle is-1 has-text-centered is-uppercase">
-									Account Login
-								</h1>
-									<div class="box"><div class="section">
+		<div class="">
+			<h1 class="subtitle is-1 has-text-centered is-uppercase">
+				Account Login
+			</h1>
+			<div class="box"><div class="section">
 	<form data-validate action="login-form">
 		<div class="field">
 			<label class="label">Account Email</label>
@@ -71,19 +41,9 @@
 		</p>
 	</form>
 </div></div>
-								</div>
-
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
 		</div>
+
 
 	</div>
 
-</main>
+</div>

@@ -17,14 +17,14 @@
   <link rel="stylesheet" href="stylesheets/app-e787fe0d66.css">
   <link rel="stylesheet" href="stylesheets/demo-b6a6c8cd86.css">
 
-  <link rel="stylesheet" href="stylesheets/theme-ecb10dbf5c.css">
+  <link rel="stylesheet" href="stylesheets/theme-00f311c306.css">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Generate using http://realfavicongenerator.net/ -->
 
 
   
-<link rel="stylesheet" href="stylesheets/users-c3419ea013.css"> 
+<link rel="stylesheet" href="stylesheets/users-e2a635b6f4.css"> 
 </head>
 
 <body class="login-page">
@@ -32,14 +32,13 @@
 
   
 
-
 <main>
 	<div class="columns is-marginless">
 		<div class="column is-paddingless">
 
 			<div class="hero is-fullheight">
 
-			<nav class="navbar is-transparent">
+				<nav class="navbar is-transparent">
 	<div class="navbar-menu navbar-center">
 		<div class="navbar-start">
 			<a href="" class="navbar-item"><i class="im im-angle-left default"></i> Frontend</a>
@@ -61,16 +60,15 @@
 			<div class="hero is-fullheight">
 				<div class="hero-body">
 					<div class="container">
-
 						<div class="columns">
 
-							<div class="column is-6 is-offset-3">
+	<div class="column is-6 is-offset-3">
 
-								<div class="">
-								<h1 class="subtitle is-1 has-text-centered is-uppercase">
-									Account Login
-								</h1>
-									<div class="box"><div class="section">
+		<div class="">
+			<h1 class="subtitle is-1 has-text-centered is-uppercase">
+				Account Login
+			</h1>
+			<div class="box"><div class="section">
 	<form data-validate action="login-form">
 		<div class="field">
 			<label class="label">Account Email</label>
@@ -105,12 +103,12 @@
 		</p>
 	</form>
 </div></div>
-								</div>
+		</div>
 
 
-							</div>
+	</div>
 
-						</div>
+</div>
 
 					</div>
 				</div>
