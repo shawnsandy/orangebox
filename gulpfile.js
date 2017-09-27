@@ -13,6 +13,8 @@ var notify = require('gulp-notify');
 var changed = require('gulp-changed');
 var toast = require('node-notifier');
 var git = require("gulp-git");
+var replace = require("gulp-ext-replace");
+var print = require("gulp-print");
 
 const icons = function(iconsDir, outputDir) {
     var deferred = q.defer(),
@@ -32,18 +34,6 @@ const icons = function(iconsDir, outputDir) {
     return deferred.promise;
 
 };
-
-
-gulp.task('images', function() {
-    return gulp.src('images/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('src/img/'))
-});
-
-gulp.task('copy:fonts', function() {
-    gulp.src('./node_modules/bootstrap-sass/assets/**/*.*')
-        .pipe(gulp.dest('./src/public/css/fonts/'));
-});
 
 
 
@@ -66,8 +56,8 @@ gulp.task('package', function() {
 })
 
 
-gulp.task("git:clone", function() {
-  git.clone("https://github.com/shawnsandy/frontend", {args: './theme'}, function(err) {
+gulp.task("clone:html", function() {
+  git.clone("https://github.com/shawnsandy/frontend", {args: './html'}, function(err) {
     if (err) {
         toast.notify( {
             title : "Sorry!",
@@ -80,8 +70,31 @@ gulp.task("git:clone", function() {
 });
 
 
-gulp.task('watch:sass', function() {
-    return gulp.watch('./src/resources/assets/**/*.scss', ['sass']);
+/**
+ * imports views and converts them to blade.php files
+ *
+ */
+
+gulp.task("import:views", function() {
+    return gulp.src("./html/theme/views/**/*.html", {"base": "./html/theme/views"})
+    .pipe(replace(".blade.php", ".html"))
+    .pipe(changed("./src/imports/views"))
+    .pipe(gulp.dest("./src/imports/views"))
+    .pipe(print())
 });
 
-gulp.task('default', ["sass", "package"], function() {})
+
+/**
+ * import partial views directly into resources
+ * overwrites existing files in the directory
+ * partials should not be edited / modified
+ */
+gulp.task("import:partials", function() {
+    return gulp.src("./html/theme/views/partials/**/*.html", {"base": "./html/theme/views"})
+    .pipe(replace(".blade.php", ".html"))
+    .pipe(changed("./src/resources/views"))
+    .pipe(gulp.dest("./src/resources/views"))
+    .pipe(print())
+});
+
+gulp.task('default', ["package"], function() {})
