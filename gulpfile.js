@@ -61,7 +61,6 @@ gulp.task("imports", ["import:views", "import:partials", "import:assets"], funct
 gulp.task("import:views", function() {
     return gulp.src("./html/theme/views/**/*.html", {"base": "./html/theme/views"})
     .pipe(replace(".blade.php", ".html"))
-    .pipe(changed("./src/imports/views"))
     .pipe(gulp.dest("./src/imports/views"))
     .pipe(print())
 });
@@ -75,7 +74,6 @@ gulp.task("import:views", function() {
 gulp.task("import:partials", function() {
     return gulp.src("./html/theme/views/partials/**/*.html", {"base": "./html/theme/views"})
     .pipe(replace(".blade.php", ".html"))
-    .pipe(changed("./src/resources/views"))
     .pipe(gulp.dest("./src/resources/views"))
     .pipe(print())
 });
@@ -85,8 +83,7 @@ gulp.task("import:partials", function() {
  * imports assets into the public dir
  */
 gulp.task("import:assets", function() {
-    return gulp.src("./html/theme/public/**/*.*", {"base" : "./html/public"})
-    .pipe(changed("./src/public"))
+    return gulp.src(["./html/theme/public/css/**/*.css", "./html/theme/public/js/**/*.js"], {"base" : "./html/public"})
     .pipe(gulp.dest("./src/public"))
     .pipe(print())
 })

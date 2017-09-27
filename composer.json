@@ -47,16 +47,16 @@
     "config": {
         "sort-packages": true
     },
-      "extra": {
-          "laravel": {
-              "providers": [
-                 //"ShawnSandy\Orangebox\\OrangeboxServicesProvider"
-              ],
-              "aliases": {
-                  //"Orangebox": "ShawnSandy\Orangebox\\OrangeboxFacade"
-              }
-          }
+    "extra": {
+        "laravel": {
+            "providers": [
+                //"ShawnSandy\Orangebox\\OrangeboxServicesProvider"
+            ],
+            "aliases": {
+                //"Orangebox": "ShawnSandy\Orangebox\\OrangeboxFacade"
+            }
+        }
 
-      }
+    }
 
 }
