@@ -15,6 +15,8 @@ var toast = require('node-notifier');
 var git = require("gulp-git");
 var replace = require("gulp-ext-replace");
 var print = require("gulp-print");
+var replace_txt = require("gulp-replace");
+var config = require("./config.js")
 
 
 
@@ -74,6 +76,7 @@ gulp.task("import:views", function() {
 gulp.task("import:partials", function() {
     return gulp.src("./html/theme/views/partials/**/*.html", {"base": "./html/theme/views"})
     .pipe(replace(".blade.php", ".html"))
+    .pipe(replace_txt("stylesheets", "/"+config.theme_folder+"/css"))
     .pipe(gulp.dest("./src/resources/views"))
     .pipe(print())
 });
