@@ -16,25 +16,6 @@ var git = require("gulp-git");
 var replace = require("gulp-ext-replace");
 var print = require("gulp-print");
 
-const icons = function(iconsDir, outputDir) {
-    var deferred = q.defer(),
-        iconDir = iconsDir;
-
-    options = { enhanceSVG: true };
-
-    var files = fs.readdirSync(iconDir).map(function(fileName) {
-        return path.join(iconDir, fileName);
-    });
-
-    var grunticon = new Grunticon(files, 'src/public/icons/' + outputDir, options);
-
-    grunticon.process(function() {
-        deferred.resolve();
-    });
-    return deferred.promise;
-
-};
-
 
 
 gulp.task('sass', function() {
