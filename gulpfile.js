@@ -61,10 +61,13 @@ gulp.task("imports", ["import:views", "import:partials", "import:assets"], funct
  */
 
 gulp.task("import:views", function() {
-    return gulp.src("./html/theme/views/**/*.html", {"base": "./html/theme/views"})
-    .pipe(replace(".blade.php", ".html"))
-    .pipe(gulp.dest("./src/imports/views"))
-    .pipe(print())
+    return gulp
+      .src("./html/theme/views/**/*.html", { base: "./html/theme/views" })
+      .pipe(replace(".blade.php", ".html"))
+      .pipe(replace_txt("stylesheets", "/" + config.theme_folder + "/css"))
+      .pipe(replace_txt("javascripts", "/" + config.theme_folder + "/js"))
+      .pipe(gulp.dest("./src/imports/views"))
+      .pipe(print());
 });
 
 
@@ -77,6 +80,7 @@ gulp.task("import:partials", function() {
     return gulp.src("./html/theme/views/partials/**/*.html", {"base": "./html/theme/views"})
     .pipe(replace(".blade.php", ".html"))
     .pipe(replace_txt("stylesheets", "/"+config.theme_folder+"/css"))
+    .pipe(replace_txt("javascripts", "/"+config.theme_folder+"/js"))
     .pipe(gulp.dest("./src/resources/views"))
     .pipe(print())
 });
